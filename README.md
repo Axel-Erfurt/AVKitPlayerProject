@@ -1,7 +1,11 @@
 # AVKitPlayerProject
 
-detect video size and ratio
+(xCode 6 OS X 10.10)
 
-borderless window
+detect video size and aspect ratio
+
+borderless window (with working Menu shortcuts)
 
 movable by background
+
+proportional resizing
