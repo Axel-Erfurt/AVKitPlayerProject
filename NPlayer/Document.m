@@ -57,9 +57,10 @@
     int h = _naturalSize.height;
     float ratio = (float)w/h;
     
-    aController.window.aspectRatio = NSMakeSize(ratio,1.0);
-    
     [aController.window setFrame:NSMakeRect(0.f, 0.f, _naturalSize.width, _naturalSize.height) display:YES animate:YES];
+    aController.window.minSize = NSMakeSize(220, 220 / ratio);
+    
+    aController.window.aspectRatio = NSMakeSize(ratio,1.0);
     
     [aController.window displayIfNeeded];
     [aController.window display] ;
@@ -91,7 +92,7 @@
 
 {
     _player = [AVPlayer playerWithURL:absoluteURL];
-    _player.volume = 0.75;
+    _player.volume = 0.85;
     _myurl = absoluteURL;
     return YES;
 }
